@@ -9,18 +9,18 @@ describe('Log out + log in - user', () => {
 
     it('log in TC-OV19', () => {
 
-        let login = 'monika.nov@gmail.com'
-        let password = 'MonikaNov123'
+        let login = 'monika.nov@gmail.com'      // definition login
+        let password = 'MonikaNov123'           // definition password
         let logInButton = $('#SubmitLogin')
 
-        $('.hide_xs').click()
+        $('.hide_xs').click()                  // click to button sing in
 
-        $('#email').setValue(login)
-        $('#passwd').setValue(password)
-        logInButton.click()
+        $('#email').setValue(login)             // fill value login
+        $('#passwd').setValue(password)         // fill value password
+        logInButton.click()                     // click log in button
 
 
-        expect($('.page-heading')).toHaveText('MY ACCOUNT')
+        expect($('.page-heading')).toHaveText('MY ACCOUNT')  // expect page after sing in have text my account
 
     })
 
@@ -28,11 +28,11 @@ describe('Log out + log in - user', () => {
     it('log out TC-OV18', () => {
 
 
-        $('#user_info_acc').click()
+        $('#user_info_acc').click()                        // click to user info
         browser.pause(2000)
-        $('.header_user_info [title="Log me out"]').click()
+        $('.header_user_info [title="Log me out"]').click()    // click to log out
         browser.pause(2000)
-        expect($('.page-heading')).toHaveText('AUTHENTICATION')
+        expect($('.page-heading')).toHaveText('AUTHENTICATION') // expect after log out we are in page with text authentication
 
     })
 })
