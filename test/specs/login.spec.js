@@ -25,7 +25,7 @@ describe('Log out + log in - user', () => {
         })
 
 
-      it('log out TC-OV19', () => {
+      it('log out TC-OV18', () => {
 
 
         $('#user_info_acc').click()
